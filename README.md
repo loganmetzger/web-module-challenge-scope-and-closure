@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure refers to essentially what is availible to use in each function from either inside the function itself, or from outside the function in less specific layers. Functions cannot use variables or other functions that are nested inside other functions, unless they are specifically returned to a less specific scope. Basically functions can always reach out into the global, but cannot reach inside another function unless data is specifically returned from the function
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Closure is used inside the curly brackets for each function. Functions enclose their contents
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+Dan's name will always stay the same, but the roll is different. Since the function reinitializes each time, it will start with a new random number between 1-6.
+
 c. What is the lexical scope of `newRoll`? 
+
+The lexical scope of newRoll only allows it to access everything upwards in scope from where it is at. Since it is nested as deeply in this function as it was written, it has acces to itself as well as the contents of all the other functions as well
 
 ### Task 2c - Exit Ticket
 
