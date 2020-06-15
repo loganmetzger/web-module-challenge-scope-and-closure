@@ -18,6 +18,8 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 
+console.log(processFirstItem(['foo', 'bar'], 'str'));
+
 // ⭐️ Example Challenge END ⭐️
 
 
@@ -28,10 +30,16 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * Counter 1 Will reset every time the function is called. Counter 2 will keep a continuous count that adds on to each previous time the function was called
+ * 
  * 2. Which of the two uses a closure? How can you tell?
+ * 
+ * The first one uses closure, since all of the parts of the function are contained inside of it. The second one uses a variable from the global scope
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
+ * Counter 1 would be best for something that resets - in baseball this could be outs in an inning. Counter 2 is better for something where you want to count the whole way - in baseball this could be the score for the entire game
+ * 
 */
 
 // counter1 code
@@ -56,9 +64,9 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(teamOneScore){
 
-    /*Code Here*/
+  Math.round(Math.random()) * 2
 
 }
 
