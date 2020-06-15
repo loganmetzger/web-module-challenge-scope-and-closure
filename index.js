@@ -122,8 +122,20 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inning, numOfInnings) {
+
+  let initialScore = 0;
+
+  for (let i = 0; i < numOfInnings; i++) {
+
+    initialScore += inning(0, 2);
+    console.log(`${i + 1} inning: ${initialScore}`)
+
+  }
+
+  return initialScore
+
 }
 
+scoreboard(inning, 9);
 
