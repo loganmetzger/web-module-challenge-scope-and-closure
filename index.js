@@ -94,6 +94,10 @@ function finalScore(inning, numOfInnings){
   for (let i = 0; i < numOfInnings; i++) {
     homeScore += inning(0, 2);
     awayScore += inning(0, 2);
+
+    if (homeScore === awayScore) {
+      numOfInnings += 1;
+    }
   }
 
   return {homeTeam: homeScore, awayTeam: awayScore}
@@ -129,7 +133,7 @@ function scoreboard(inning, numOfInnings) {
   for (let i = 0; i < numOfInnings; i++) {
 
     initialScore += inning(0, 2);
-    console.log(`${i + 1} inning: ${initialScore}`)
+    console.log(`Inning ${i + 1} : ${initialScore}`)
 
   }
 
