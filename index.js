@@ -14,11 +14,11 @@
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
 */
-function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
-}
+// function processFirstItem(stringList, callback) {
+//   return callback(stringList[0])
+// }
 
-console.log(processFirstItem(['foo', 'bar'], 'str'));
+// console.log(processFirstItem(['foo', 'bar'], 'str'));
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -64,11 +64,13 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(teamOneScore){
+function inning(min, max){
 
-  Math.round(Math.random()) * 2
+  return Math.round(Math.random() * (max-min) + min);
 
 }
+
+// console.log(inning(0, 2));
 
 /* Task 3: finalScore()
 
