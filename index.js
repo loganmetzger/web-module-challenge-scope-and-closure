@@ -105,6 +105,15 @@ function finalScore(inning, numOfInnings){
 
 console.log(finalScore(inning, 9));
 
+console.log(finalScore(inning, 9));
+
+console.log(finalScore(inning, 9));
+
+console.log(finalScore(inning, 9));
+
+console.log(finalScore(inning, 9));
+
+
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
